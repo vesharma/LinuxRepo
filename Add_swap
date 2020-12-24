@@ -1,21 +1,21 @@
 Method-1
-    3  echo "- - -" > /sys/class/scsi_host/host/scan
-    4  echo "- - -" > /sys/class/scsi_host/host0/rescan
-    5  echo "- - -" > /sys/class/scsi_host/host0/scan
-    6  echo "- - -" > /sys/class/scsi_host/host1/scan
-    7  fdisk /dev/sdb
-    8  partprobe /dev/sdb
-    9  swapoff -v /dev/centos/swap
-   10  pvcreate /dev/sdb1
-   11  vgextend centos /dev/sdb1
-   12  lvextend /dev/centos/swap -L +2G
-   13  lvs
-   14  vgs
-   17  mkswap /dev/centos/swap
-   18  swapon -a
-   19  swapon -s /dev/centos/swap
-   20  fdisk -l
-   21  free -m
+    
+      echo "- - -" > /sys/class/scsi_host/host0/scan
+      echo "- - -" > /sys/class/scsi_host/host1/scan
+      echo "- - -" > /sys/class/scsi_host/host2/scan
+      fdisk /dev/sdb
+      partprobe /dev/sdb
+      swapoff -v /dev/centos/swap
+     pvcreate /dev/sdb1
+     vgextend centos /dev/sdb1
+     lvextend /dev/centos/swap -L +2G
+     lvs
+     vgs
+     mkswap /dev/centos/swap
+     swapon -a
+     swapon -s /dev/centos/swap
+     fdisk -l
+     free -m
 
 
 Method -2
